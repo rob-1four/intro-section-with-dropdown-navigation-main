@@ -1,0 +1,157 @@
+:root{
+    --light-color: hsl(0, 0%, 98%);
+    --gray-color: hsl(0, 0%, 41%);
+    --dark-color: hsl(0, 0%, 8%);
+    --medium-text: 500;
+    --bold-text: 700;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    color: var(--gray-color);
+    list-style-type: none;
+    text-decoration: none;
+}
+
+body{
+   
+    font-family: 'Epilogue', sans-serif;
+    background: var(--light-color);
+    
+    /* font-size: 18px; */
+    
+}
+
+/* ===================
+Typography
+====================== */
+
+.main-nav{
+    padding: 2em;
+}
+
+.main-nav-first-lists{
+    position: fixed;
+    width: 85%;
+    height: 0vh;
+    background-color: var(--light-color);
+    left: 8em;
+    top: 0;
+    display: none;
+}
+
+.main-nav-first-lists li{
+    position: relative;
+    top: 4em;
+    margin: 1.5em;
+    transition: all .5s;
+}
+
+#check{
+    display: none;
+}
+
+.hamburger{
+    position: relative;
+    z-index: 1;
+}
+
+#check:checked ~ .main-nav-first-lists{
+    height: 100vh;
+    display: block;
+}
+
+
+#check:checked ~ .hero{
+    display: none;
+    background: black;
+    position: relative;
+    z-index: 1;
+    
+}
+
+.hero-background img{
+    width: 100%;
+    height: 100%;
+}
+
+.hero-content-title{
+   font-size: 2.2em;
+   font-weight: var(--bold-text);
+   color: var(--dark-color); 
+   margin-bottom: .75em;
+}
+
+.hero-content-body{
+    line-height: 1.5em;
+    font-weight: var(--medium-text);
+    margin-bottom: 2em;
+}
+
+.btn-learn-more{
+    padding: 1em 1.5em;
+    font-size: 1em;
+    font-weight: var(--bold-text);
+    background-color: var(--dark-color);
+    color: var(--light-color);
+    border: none;
+    border-radius: 15px;
+    margin-bottom: 3em;
+}
+
+/* ===================
+layout
+====================== */
+
+
+
+.main-nav-first{
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.hero{
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+
+.hero-background{
+    height: 45%;
+    margin-bottom: 3em;
+    
+}
+
+.hero-content{
+    height: 45%;
+    text-align: center;
+}
+
+.clients-logo{
+   display: flex;
+   justify-content: space-evenly;
+   height: 50%;
+}
+
+.client-logo{
+    object-fit: contain;
+
+}
+
+
+
+/* .nav-first, .nav-first-lists, .nav-second-lists{
+    display: flex;
+    align-items: flex-end;
+    
+    
+} */
+
+/* .nav-first-lists, .nav-second-lists{
+    margin-top: 0.4em;
+} */
